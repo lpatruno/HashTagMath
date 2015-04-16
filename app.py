@@ -1,10 +1,23 @@
 from flask import Flask, render_template
+import pandas as pd
+import random
 
 app = Flask(__name__)
 
+def random_question():
+    question_info = pd.read_csv('/home/vagrant/datacourse/MathQuestionTagging/data/question_info_data_2.csv', index_col=0)
+    index = random.randint(0, question_info.shape[0])
+    random_question = question_info.iloc[index]
+    
+    text = random_question['question_text']
+    tags = random_question['keywords']
+    
+    return text, tags
+    
 @app.route('/')
 def index():
-    return render_template('index.html', question='Woot guestion text')
+    question, keywords = random_question()
+    return render_template('index.html', question=question)
     
 @app.route('/model')
 def model_test():
