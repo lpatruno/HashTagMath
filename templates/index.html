@@ -53,15 +53,18 @@
 	      
 		  <div class="row">
 			  
+			  <div class='row'>
+				  <div class='col-sm-8 col-sm-offset-2'>
+					  <button type="button" class="btn btn-primary pull-right">Primary</button>
+				  </div>
+			  </div>
+			  
 			  <div class='col-sm-10 col-sm-offset-1'>
-				  <button type="button" class="btn btn-primary pull-right">Random Question</button>
-				  <p>
-				    {% if question %}
-				      {{question}}
-				    {% else %}
-				      No question
-				    {% endif %}
-			      </p>
+				  {% if question %}
+				    {{question}}
+				  {% else %}
+				    No question
+				  {% endif %}
 			  </div>
 		  </div>
 		   
