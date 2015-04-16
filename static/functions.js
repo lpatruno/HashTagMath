@@ -12,6 +12,8 @@ $( document ).ready(function() {
 		
 		$('#questionText').html(question);
 		$('#keywords').html(keyword_string);
+		
+		MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 	});
 });
 
