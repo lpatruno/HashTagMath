@@ -17,7 +17,7 @@ def random_question():
 @app.route('/getQuestion')
 def get_data():
     question, keywords = random_question()
-    return jsonify(question=question)
+    return jsonify(question=question, keywords=keywords)
     
 @app.route('/')
 def index():
