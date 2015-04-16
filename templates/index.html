@@ -64,13 +64,17 @@
 				  {% if question %}
 				    {{question}}
 				  {% else %}
-				    No question
+				    Error. Please click the button!
 				  {% endif %}
 			  </div>
 			  
 			  <div class='col-sm-4'>
 				  <h3>Keywords</h3>
-				  Labels here
+				  {% if keywords %}
+				    {{keywords}}
+				  {% else %}
+				    Error. Please click the button!
+				  {% endif %}
 			  </div>
 			  
 		  </div>

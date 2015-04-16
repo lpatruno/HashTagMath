@@ -17,7 +17,7 @@ def random_question():
 @app.route('/')
 def index():
     question, keywords = random_question()
-    return render_template('index.html', question=question)
+    return render_template('index.html', question=question, keywords=keywords)
     
 @app.route('/model')
 def model_test():
