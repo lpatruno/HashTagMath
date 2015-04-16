@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 import pandas as pd
 import random
 
@@ -13,6 +13,11 @@ def random_question():
     tags = random_question['keywords']
     
     return text, tags
+    
+@app.route('/test')
+def add_numbers():
+    num = 3
+    return jsonify(result=num)
     
 @app.route('/')
 def index():
