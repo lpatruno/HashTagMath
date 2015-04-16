@@ -1,5 +1,7 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
-	//$.get(URL,callback);
+    
+	$.get('/test',function(data){
+		console.log(data);
+	});
 });
 
