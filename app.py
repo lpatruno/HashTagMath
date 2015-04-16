@@ -1,6 +1,7 @@
 from flask import Flask, render_template, jsonify
 import pandas as pd
 import random
+import ast
 
 app = Flask(__name__)
 
@@ -17,6 +18,7 @@ def random_question():
 @app.route('/getQuestion')
 def get_data():
     question, keywords = random_question()
+    keywords = ast.literal_eval( keywords )
     return jsonify(question=question, keywords=keywords)
     
 @app.route('/')
