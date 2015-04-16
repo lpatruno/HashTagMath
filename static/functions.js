@@ -22,5 +22,7 @@ $( document ).ready(function() {
     
 	get_question();
 	
+	$('#newQuestion').click(function(){get_question();})
+	
 });
 
