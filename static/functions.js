@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     
-	$.get('/test',function(data){
+	$.get('/getQuestion',function(data){
 		console.log(data);
 	});
 });

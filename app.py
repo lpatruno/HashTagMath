@@ -14,10 +14,10 @@ def random_question():
     
     return text, tags
     
-@app.route('/test')
-def add_numbers():
-    num = 3
-    return jsonify(result=num)
+@app.route('/getQuestion')
+def get_data():
+    question, keywords = random_question()
+    return jsonify(question=question)
     
 @app.route('/')
 def index():
