@@ -3,11 +3,15 @@ $( document ).ready(function() {
 	$.get('/getQuestion',function(data){
 		var question = data['question'];
 		var keywords = data['keywords'];
+		var keyword_string = null;
+		
+		for(var i=0; i<keywords.length; i++){
+			keyword_string += '<br>' + keywords[i];
+		}
+		keyword_string += '<br>'
 		
 		$('#questionText').html(question);
-		
-		console.log(question);
-		console.log(keywords);
+		$('#keywords').html(keyword_string);
 	});
 });
 
