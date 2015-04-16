@@ -3,7 +3,7 @@ $( document ).ready(function() {
 	$.get('/getQuestion',function(data){
 		var question = data['question'];
 		var keywords = data['keywords'];
-		var keyword_string = null;
+		var keyword_string;
 		
 		for(var i=0; i<keywords.length; i++){
 			keyword_string += '<br>' + keywords[i];
