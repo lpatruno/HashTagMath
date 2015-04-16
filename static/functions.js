@@ -6,7 +6,7 @@ $( document ).ready(function() {
 		var keyword_string;
 		
 		for(var i=0; i<keywords.length; i++){
-			keyword_string += '<br>' + keywords[i];
+			keyword_string += '<code>' + keywords[i] + '</code>';
 		}
 		keyword_string += '<br>'
 		
