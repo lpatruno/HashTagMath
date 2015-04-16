@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-    return 'Does this work?'#render_template('index.html')
+    return 'Does this work? again'#render_template('index.html')
     
 @app.route('/model')
 def model_test():
