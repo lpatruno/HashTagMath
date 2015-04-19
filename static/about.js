@@ -2,9 +2,12 @@ function get_about_page( index ){
 	
 	url = '/getAbout/' + String(index);
 	
+	console.log(String(index));
+	
 	$.get(url, function(data){
 		
 		console.log(data);
+		i = i + 1;
 		/*
 		var question = data['question'];
 		var keywords = data['keywords'];
@@ -31,8 +34,8 @@ $( document ).ready(function() {
     
 	get_about_page(i);
 	
-	// TODO add a button to navigate to the next part of presentation
-	//$('#newQuestion').click(function(){get_question();})
+	$('#next').click(function(){get_about_page(i);})
+	$('#back').click(function(){get_about_page(i-1);})
 	
 });
 
