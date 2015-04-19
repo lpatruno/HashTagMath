@@ -1,6 +1,6 @@
 function get_question(){
 	
-	$.get('/getQuestion',function(data){
+	$.get('/getQuestion', function(data){
 		var question = data['question'];
 		var keywords = data['keywords'];
 		var keyword_string = '';
