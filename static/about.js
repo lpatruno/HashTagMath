@@ -19,8 +19,13 @@ function get_tokens( keyword ){
 	var url = '/latex/' + keyword;
 	
 	$.get(url, function(data){
-		console.log(data);
-		$('#tokens').html(data);
+		tokens = data['token'];
+		token_string = '';
+		
+		for (var i=0; i<tokens.length; i++){
+			token_string += tokens[i];
+		}
+		$('#tokens').html(token_string);
 		
 	});
 }
