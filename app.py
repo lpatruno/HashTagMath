@@ -5,20 +5,22 @@ import ast
 
 app = Flask(__name__)
 
+question_info = pd.read_csv('/home/vagrant/datacourse/MathQuestionTagging/data/question_info_data_2.csv', index_col=0)
+
 def random_question():
-    question_info = pd.read_csv('/home/vagrant/datacourse/MathQuestionTagging/data/question_info_data_2.csv', index_col=0)
+    #question_info = pd.read_csv('/home/vagrant/datacourse/MathQuestionTagging/data/question_info_data_2.csv', index_col=0)
     index = random.randint(0, question_info.shape[0])
     random_question = question_info.iloc[index]
     
     text = random_question['question_text']
-    tags = random_question['keywords']
+    tags = ast.literal_eval( random_question['keywords'] )
     
     return text, tags
     
 @app.route('/getQuestion')
 def get_data():
     question, keywords = random_question()
-    keywords = ast.literal_eval( keywords )
+    #keywords = ast.literal_eval( keywords )
     return jsonify(question=question, keywords=keywords)
     
 @app.route('/')
