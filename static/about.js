@@ -36,8 +36,10 @@ $( document ).ready(function() {
 	});
 	
 	$('#back').click(function(){
-		i = i - 1;
-		get_about_page(i);
+		if (i>0){
+			i = i - 1;
+			get_about_page(i);
+		}
 	});
 	
 	get_about_page(i);
