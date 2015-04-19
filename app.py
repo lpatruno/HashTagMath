@@ -40,7 +40,7 @@ def index():
   
 @app.route('/getAbout/<index>')
 def get_about_page(index):
-    template = 'about%s.html' %s
+    template = 'about%s.html' % index
     return render_template(template);
     
 
