@@ -7,6 +7,11 @@ function get_about_page( index ){
 		$('#container').html(data);
 		
 	});
+	
+	// Render all LaTeX content
+	if (index == 0){
+		MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+	}
 }
 
 $( document ).ready(function() {
