@@ -39,7 +39,7 @@ def index():
   
   
 @app.route('/getAbout/<index>')
-def get_about_page(name):
+def get_about_page(index):
     return "Page %d requested" % index  
 
 @app.route('/about')
