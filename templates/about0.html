@@ -3,19 +3,48 @@
 		<h1 style='text-align:center;'>Dataset</h1>
 		
 		<ul>
-		  <li>Home</li>
-		  <li>Products
-		    <ul>
-		      <li>Gadgets</li>
-		      <li>Accessories</li>
-		    </ul>
-		  </li>
-		  <li>About Us</li>
-		  <li>Contact</li>
+		  <li>WebWorK Open Problem Library</li>
+		  <li>Online homework system for individualized math problems</li>
+		  <li>25,000 university level mathematics problems</li>
+		  <li>82% of problems have been tagged with keywords</li>
+		  <li>2200 different tags
+		  <li>1-16 tags per problem
 		</ul>
 		
 	</div>
 	<div class='col-sm-5'>
-		<h1 style='text-align:center;'>Aproach</h1>
+		<h1 style='text-align:center;'>Sample Problem</h1>
+		<pre><code>## DESCRIPTION
+## Calculus
+## ENDDESCRIPTION
+
+## Tagged by tda2d
+
+## DBsubject(Calculus - single variable)
+## DBchapter(Integrals)
+## DBsection(Definite integrals (with trigonometric functions))
+## Date(6/3/2002)
+## Institution(ASU)
+## MLT(DefAOverOnePlXSq)
+## MLTleader(1)
+## Level(2)
+## TitleText1('Calculus: Early Transcendentals')
+## AuthorText1('Stewart')
+## EditionText1('6')
+## Section1('5.3')
+## Problem1('37')
+## KEYWORDS('definite integral','Calculus','Riemann Integral','integrals','definite')
+
+
+Evaluate the integral
+\[ \int_{1}^{\sqrt{$a}} \frac{$b}{1+x^2} dx \]
+$BR \{ans_rule( 40)\}
+EOT
+
+$answer=$b*(arctan(sqrt($a))-arctan(1));
+
+ANS(num_cmp($answer));
+</code><pre>
+
 	</div>
 </div>
