@@ -1,6 +1,6 @@
 function get_about_page( index ){
 	
-	url = '/about/' + String(index);
+	var url = '/about/' + String(index);
 	
 	$.get(url, function(data){
 		
@@ -15,8 +15,14 @@ function get_about_page( index ){
 }
 
 function get_tokens( keyword ){
-	console.log('hello');
-	console.log(keyword);
+	
+	var url = '/latex/' + keyword;
+	
+	$.get(url, function(data){
+		
+		$('#tokens').html(data);
+		
+	});
 }
 
 $( document ).ready(function() {

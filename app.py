@@ -67,12 +67,13 @@ def index():
     """
     return render_template('index.html')
   
+@app.route('/latex/<keyword>')
 def get_top_latex_tokens():
     """
     AJAX method to return top LaTeX tokens associated with a particular keyword
     """
-    tokens = top_latex_tokens('calculus')
-    return None
+    tokens = top_latex_tokens(keyword)
+    return jsonify(tokens=tokens)
   
 @app.route('/about/<index>')
 def get_about_page(index):
