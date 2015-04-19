@@ -67,17 +67,19 @@ def index():
     """
     return render_template('index.html')
   
+def get_top_latex_tokens():
+    """
+    AJAX method to return top LaTeX tokens associated with a particular keyword
+    """
+    tokens = top_latex_tokens('calculus')
+    return None
   
 @app.route('/about/<index>')
 def get_about_page(index):
     """
     AJAX request method to serve pages of the about presentation
     """
-    template = 'about%s.html' % index
-    
-    if index == '4':
-        top_latex_tokens('calculus')
-        
+    template = 'about%s.html' % index    
     return render_template(template);
     
 
