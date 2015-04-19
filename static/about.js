@@ -14,6 +14,10 @@ function get_about_page( index ){
 	}
 }
 
+function get_tokens( keyword ){
+	console.log(keyword);
+}
+
 $( document ).ready(function() {
 	
 	i = 0;
