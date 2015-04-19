@@ -82,7 +82,7 @@ def get_about_page(index):
     template = 'about%s.html' % index    
     
     if index == '4':
-        top_tags = tag_df.sort('count', ascending=False).head(50)['keyword'].values
+        top_tags = tag_df.sort('count', ascending=False).head(30)['keyword'].values
         return render_template(template, keywords=top_tags)
         
     return render_template(template);
