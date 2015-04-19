@@ -1,6 +1,6 @@
 function get_about_page( index ){
 	
-	url = '/getAbout/' + String(index);
+	url = '/about/' + String(index);
 	
 	$.get(url, function(data){
 		

@@ -38,8 +38,11 @@ def index():
     return render_template('index.html')
   
   
-@app.route('/getAbout/<index>')
+@app.route('/about/<index>')
 def get_about_page(index):
+    """
+    AJAX request method to serve pages of the about presentation
+    """
     template = 'about%s.html' % index
     return render_template(template);
     
