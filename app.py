@@ -35,6 +35,14 @@ def index():
     Method to display the keyword predictor system
     """
     return render_template('index.html')
+    
+
+@app.route('/about')
+def about():
+    """
+    Method to display the project summary presentation
+    """
+    return render_template('about.html')
         
     
 @app.route('/user/<name>')
