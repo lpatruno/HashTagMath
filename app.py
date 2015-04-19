@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Global variable containing the question information
 #question_info = pd.read_csv('/home/vagrant/datacourse/MathQuestionTagging/data/question_info_data_2.csv', index_col=0)
 latex_text_40_df = pd.read_csv('/home/vagrant/datacourse/MathQuestionTagging/data/latex_text_40_results.csv', index_col=0)
-$latex_text_50_df = pd.read_csv('/home/vagrant/datacourse/MathQuestionTagging/data/latex_text_50_results.csv', index_col=0)
+#latex_text_50_df = pd.read_csv('/home/vagrant/datacourse/MathQuestionTagging/data/latex_text_50_results.csv', index_col=0)
 
 def random_question():
     """
