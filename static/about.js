@@ -2,12 +2,10 @@ function get_about_page( index ){
 	
 	url = '/getAbout/' + String(index);
 	
-	console.log(String(index));
-	
 	$.get(url, function(data){
 		
 		console.log(data);
-		i = i + 1;
+		
 		/*
 		var question = data['question'];
 		var keywords = data['keywords'];
@@ -31,11 +29,18 @@ function get_about_page( index ){
 $( document ).ready(function() {
 	
 	i = 0;
-    
-	get_about_page(i);
 	
-	$('#next').click(function(){get_about_page(i);})
-	$('#back').click(function(){get_about_page(i-2);})
+	$('#next').click(function(){
+		i = i + 1;
+		get_about_page(i);
+	});
+	
+	$('#back').click(function(){
+		i = i - 1;
+		get_about_page(i);
+	});
+	
+	get_about_page(i);
 	
 });
 

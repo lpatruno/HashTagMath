@@ -40,8 +40,8 @@ def index():
   
 @app.route('/getAbout/<index>')
 def get_about_page(index):
-    print index
     return jsonify(index=index)  
+    
 
 @app.route('/about')
 def about():
