@@ -8,26 +8,28 @@ app = Flask(__name__)
 # Global variable containing the question information
 # TODO change this to the predicted set of questions to show off the models
 question_info = pd.read_csv('/home/vagrant/datacourse/MathQuestionTagging/data/question_info_data_2.csv', index_col=0)
+latex_text_50 = pd.read_csv('/home/vagrant/datacourse/MathQuestionTagging/data/latex_text_50_results.csv', index_col=0)
 
 def random_question():
     """
     This function picks a question from the set of questions at random to display on the website
     """
-    index = random.randint(0, question_info.shape[0])
-    random_question = question_info.iloc[index]
+    index = random.randint(0, latex_text_50.shape[0])
+    random_question = latex_text_50.iloc[index]
     
     text = random_question['question_text']
     tags = ast.literal_eval( random_question['keywords'] )
+    latex_text_50 = ast.literal_eval( random_question['y_pred'] )
     
-    return text, tags
+    return text, tags, latex_text_50
     
 @app.route('/getQuestion')
 def get_data():
     """
     This method gets called by the AJAX request for a new question
     """
-    question, keywords = random_question()
-    return jsonify(question=question, keywords=keywords)
+    question, keywords, model_2 = random_question()
+    return jsonify(question=question, keywords=keywords, model_2=model_2)
     
 @app.route('/')
 @app.route('/index')
