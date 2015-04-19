@@ -40,8 +40,8 @@ def index():
   
 @app.route('/getAbout/<index>')
 def get_about_page(index):
-    #return jsonify(index=index)  
-    return render_template('intro.html');
+    template = 'about%s.html' %s
+    return render_template(template);
     
 
 @app.route('/about')
