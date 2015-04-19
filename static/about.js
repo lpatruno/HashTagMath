@@ -15,6 +15,7 @@ function get_about_page( index ){
 }
 
 function get_tokens( keyword ){
+	console.log('hello');
 	console.log(keyword);
 }
 
