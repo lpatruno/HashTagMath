@@ -35,7 +35,7 @@ $( document ).ready(function() {
 	get_about_page(i);
 	
 	$('#next').click(function(){get_about_page(i);})
-	$('#back').click(function(){get_about_page(i-1);})
+	$('#back').click(function(){get_about_page(i-2);})
 	
 });
 
