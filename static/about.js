@@ -19,7 +19,7 @@ function get_tokens( keyword ){
 	var url = '/latex/' + keyword;
 	
 	$.get(url, function(data){
-		
+		console.log(data);
 		$('#tokens').html(data);
 		
 	});
