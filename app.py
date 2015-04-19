@@ -80,6 +80,11 @@ def get_about_page(index):
     AJAX request method to serve pages of the about presentation
     """
     template = 'about%s.html' % index    
+    
+    if index == '4':
+        top_tags = tag_df.sort('count', ascending=False).head(50)['keyword'].values
+        print top_tags
+        
     return render_template(template);
     
 
