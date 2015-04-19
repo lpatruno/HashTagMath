@@ -30,6 +30,7 @@ def get_data():
     return jsonify(question=question, keywords=keywords)
     
 @app.route('/')
+@app.route('/index')
 def index():
     """
     Method to display the keyword predictor system
