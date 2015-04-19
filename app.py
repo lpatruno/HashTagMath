@@ -49,7 +49,7 @@ def top_latex_tokens(keyword):
         token_df = pd.DataFrame({'token' : tokens, 'count' :  count})
         token_df = token_df.sort('count', ascending=False).head(20)
         
-        return token_df['token'].values
+        return token_df['token'].values.tolist()
         
             
 @app.route('/getQuestion')
