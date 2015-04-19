@@ -7,20 +7,21 @@ app = Flask(__name__)
 
 # Global variable containing the question information
 #question_info = pd.read_csv('/home/vagrant/datacourse/MathQuestionTagging/data/question_info_data_2.csv', index_col=0)
-latex_text_50_df = pd.read_csv('/home/vagrant/datacourse/MathQuestionTagging/data/latex_text_50_results.csv', index_col=0)
+latex_text_40_df = pd.read_csv('/home/vagrant/datacourse/MathQuestionTagging/data/latex_text_40_results.csv', index_col=0)
+$latex_text_50_df = pd.read_csv('/home/vagrant/datacourse/MathQuestionTagging/data/latex_text_50_results.csv', index_col=0)
 
 def random_question():
     """
     This function picks a question from the set of questions at random to display on the website
     """
-    index = random.randint(0, latex_text_50_df.shape[0])
-    random_question = latex_text_50_df.iloc[index]
+    index = random.randint(0, latex_text_40_df.shape[0])
+    random_question = latex_text_40_df.iloc[index]
     
     text = random_question['question_text']
     y_true = ast.literal_eval( random_question['keywords'] )
-    y_pred_latex_text_50 = ast.literal_eval( random_question['y_pred'] )
+    y_pred_latex_text_40 = ast.literal_eval( random_question['y_pred'] )
     
-    return text, y_true, y_pred_latex_text_50
+    return text, y_true, y_pred_latex_text_40
     
 @app.route('/getQuestion')
 def get_data():
