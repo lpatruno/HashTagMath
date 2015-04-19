@@ -5,7 +5,7 @@
 		{% for kw in keywords %}
 		  <code id="{{ kw }}" style='margin-left:15px;'> {{ kw }} </code>
 		  <script>
-		  $("#{{kw}}").click(function(){get_tokens( {{ kw }} );});
+		  $("#{{kw}}").click(function(){get_tokens( "{{ kw }}" );});
 		  </script>
 		{% endfor %}
 	</div> 
