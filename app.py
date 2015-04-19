@@ -40,6 +40,7 @@ def index():
   
 @app.route('/getAbout/<index>')
 def get_about_page(index):
+    print index
     return "Page %d requested" % index  
 
 @app.route('/about')
