@@ -1,5 +1,5 @@
 <div class='row'>
-	<div class='col-sm-9'>
+	<div class='col-sm-12'>
 		<h1 style='text-align:center;'>Most frequent LaTeX tokens</h1>
 		<p>Use the occurrence of certain LaTeX tokens as features to train our classifier</p>
 		{% for kw in keywords %}
@@ -9,11 +9,8 @@
 		  </script>
 		{% endfor %}
 	</div> 
-	<div class='col-sm-3'>
-		<div id="tokens" class='col-sm-8 col-sm-offset=2'></div>
-	</div>
 </div>
 <br>
-<!-- div class="row">
-	
-</div -->
+<div class="row">
+	<div id="tokens" class='col-sm-12'></div>
+</div>
