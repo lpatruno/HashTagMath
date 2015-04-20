@@ -35,8 +35,10 @@ $( document ).ready(function() {
 	i = 0;
 	
 	$('#next').click(function(){
-		i = i + 1;
-		get_about_page(i);
+		if (i<5){
+			i = i + 1;
+			get_about_page(i);
+		}
 	});
 	
 	$('#back').click(function(){
