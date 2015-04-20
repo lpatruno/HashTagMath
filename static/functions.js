@@ -21,7 +21,7 @@ function get_question(){
 		
 		$('#questionText').html(question);
 		$('#keywords').html(keyword_string);
-		$('#model_2').html(model_2_string);
+		$('#prediction').html(model_2_string);
 		
 		// Render all LaTeX content
 		MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
