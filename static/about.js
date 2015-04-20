@@ -23,7 +23,7 @@ function get_tokens( keyword ){
 		token_string = '';
 		
 		for (var i=0; i<tokens.length; i++){
-			token_string += '<br>' + tokens[i];
+			token_string += '   ' + tokens[i];
 		}
 		$('#tokens').html(token_string);
 		
