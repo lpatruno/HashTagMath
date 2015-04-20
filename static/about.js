@@ -23,7 +23,7 @@ function get_tokens( keyword ){
 		token_string = '';
 		
 		for (var i=0; i<tokens.length; i++){
-			token_string += "<span style='padding-left:5px;'>" + tokens[i] + "</span>";
+			token_string += "<span style='padding-left:15px;'>" + tokens[i] + "</span>";
 		}
 		$('#tokens').html(token_string);
 		
