@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <!-- Bootstrap meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Descriptive meta -->
+  <meta name="description" content="Data Incubator personal project">
+  <meta name="author" content="Luigi Patruno">
+  
+  <!-- Bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://getbootstrap.com/examples/blog/blog.css">
+  		
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+	
+  <!-- Header nav bar -->
+  <div class="blog-masthead">
+    <div class="container">
+	  <nav class="blog-nav">
+        <a class="blog-nav-item" href="{{url_for('index')}}">Home</a>
+        <a class="blog-nav-item" href="{{url_for('about')}}">Analysis</a>
+		<a class="blog-nav-item active" href="{{url_for('biography')}}">About Me</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Header text -->
+    <div class="blog-header">
+      <h1 class="blog-title">Luigi Patruno</h1>
+      <p class="lead blog-description">Automatically tag math problems with descriptive keywords
+    </div>
+	
+	<div class="row">
+
+	  <div class="col-sm-12 blog-main">
+		  
+        <div class="blog-post">
+			
+		  
+		  <div class="row">
+			  
+			  <div id='questionText' class='col-sm-6'>
+			  	
+				Luigi Rocks
+				
+			  </div>  
+			  
+		  </div>
+		   
+	    </div>
+		
+      </div> <!-- /.blog-main -->
+
+    </div><!-- /.row -->
+
+  </div><!-- /.main container -->
+
+
+</body>
+</html>
