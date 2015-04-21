@@ -103,7 +103,7 @@ def biography():
     """
     Method to display my bio page
     """
-    return 'Hello, World'#render_template('about_me.html')
+    return render_template('biography.html')
         
     
 if __name__ == '__main__':
