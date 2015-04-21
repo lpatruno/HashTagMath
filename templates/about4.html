@@ -2,7 +2,10 @@
 	<div class='col-sm-12'>
 		<br>
 		<h1 style='text-align:center;'>Most frequent LaTeX tokens</h1>
-		<p>Use the occurrence of certain LaTeX tokens as features to train our classifier</p>
+		<p>
+		  Click on a keyword to see the 10 LaTeX tokens that appear most frequently with that tag. These tokens were used as features
+		  to train the linear support vector classifiers.
+		</p>
 		{% for kw in keywords %}
 		  <code id="{{ kw }}" style='margin-left:15px;'> {{ kw }} </code>
 		  <script>
