@@ -6,8 +6,8 @@ import ast
 app = Flask(__name__)
 
 # Global variable containing the question information
-tag_df = pd.read_csv('static/tag_info.csv', index_col=0)
-latex_text_40_df = pd.read_csv('static/latex_text.csv', index_col=0)
+tag_df = pd.read_csv('static/data/tag_info.csv', index_col=0)
+latex_text_40_df = pd.read_csv('static/data/latex_text.csv', index_col=0)
 
 
 def random_question():
