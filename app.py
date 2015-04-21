@@ -99,7 +99,7 @@ def about():
     return render_template('about.html')
     
 @app.route('/bio')
-def about_me():
+def bio():
     """
     Method to display my bio page
     """
