@@ -98,12 +98,12 @@ def about():
     """
     return render_template('about.html')
     
-@app.route('/aboutme')
+@app.route('/bio')
 def about_me():
     """
     Method to display my bio page
     """
-    return render_template('about_me.html')
+    return 'Hello, World'#render_template('about_me.html')
         
     
 if __name__ == '__main__':
