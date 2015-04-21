@@ -97,9 +97,15 @@ def about():
     Method to display the project summary presentation
     """
     return render_template('about.html')
+    
+@app.route('/aboutme')
+def about_me():
+    """
+    Method to display my bio page
+    """
+    return render_template('about_me.html')
         
     
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
-    app.run(host='0.0.0.0', debug=True)
